@@ -36,6 +36,15 @@
 
     <link href="css/style.css" rel="stylesheet" />
     <script src="lib/jquery/jquery.min.js" type="6553d3eb11f5742ac8bcaa5f-text/javascript"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "8F0OyZ5XdMqXisdye",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -178,7 +187,7 @@
                                     <div class="validation"></div>
                                 </div>
                                 <center>
-                                    <div class="g-recaptcha" data-sitekey="6LcolZIqAAAAAIHs53S7IaNdBoIgOlJhN4RMlsvB"></div>
+                                    <div class="g-recaptcha" data-sitekey="6LchlpIqAAAAAJ76Q2Znhehw9ZwrbsprFmHa0LEx"></div>
                                 </center>
                                 <div class="text-center"><button onclick="if (!window.__cfRLUnblockHandlers) return false; return ValidateForm();" type="submit" data-cf-modified-6553d3eb11f5742ac8bcaa5f-="">Send Message</button></div>
                             </form>
@@ -266,6 +275,16 @@
                     $('.individualError').show();
                     return false;
 
+                }else{
+                    console.log("inside function")
+                    let params={
+                        name : document.getElementById("Name").value,
+                        email : document.getElementById("EmailId").value,
+                        subject : document.getElementById("Subject").value,
+                        message : document.getElementById("EmailId").value,
+                    }
+                    emailJs.send("service_lvcqxwv","template_u6lbszs",params).then(alert("Email sent"))
+                    console.log("email send")
                 }
             }
         </script>
