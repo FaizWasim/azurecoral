@@ -1,7 +1,7 @@
 
     // Initialize EmailJS
     (function() {
-        emailjs.init("WRn1cdRzixll6f6Os"); // Replace "YOUR_PUBLIC_KEY" with your EmailJS public key
+        emailjs.init("kI6YjwyOiR7-AZoM1"); // Replace "YOUR_PUBLIC_KEY" with your EmailJS public key
     })();
 
 
@@ -56,12 +56,12 @@
                         subject : $("#Subject").val(),
                         message : $("#Message").val(),
                         to_name : "Nadeem",
-                        to_email : "rossiefaiz@gmail.com"
+                        to_email : "info@quickplasma.ae"
                     }
                     console.log(formData)
                     // Replace with EmailJS integration or any success logic
                     // $("#sendmessage").fadeIn().delay(3000).fadeOut();
-                    emailjs.send("service_lvcqxwv","template_u6lbszs", formData)
+                    emailjs.send("service_evaxeqh","template_s95e7z3", formData)
                     .then(
                         function(response) {
                     $("#sendmessage").fadeIn().delay(3000).fadeOut();

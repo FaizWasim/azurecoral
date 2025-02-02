@@ -46,7 +46,9 @@ h6 {
     overflow: visible;
     background: #fff url("../img/preloader.svg") no-repeat center center;
 }
-
+.icon-blue{
+    color: #03C4EB;
+}
 /* Back to top button */
 
 .back-to-top {
